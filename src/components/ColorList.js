@@ -9,16 +9,21 @@ function ColorList() {
     "hotpink",
   ];
 
+ const sackleBcakle = colors.map((color) => <ColorItem  style ={{color: color}} color={color}/>)
+
   return (
     <div>
       <h1>Top 5 CSS Colors</h1>
-      <li style={{ color: colors[0] }}>{colors[0]}</li>
-      <li style={{ color: colors[1] }}>{colors[1]}</li>
-      <li style={{ color: colors[2] }}>{colors[2]}</li>
-      <li style={{ color: colors[3] }}>{colors[3]}</li>
-      <li style={{ color: colors[4] }}>{colors[4]}</li>
+      <ul>
+      {sackleBcakle}
+      </ul>
     </div>
   );
+}
+
+function ColorItem(props){
+  return  <li style={props.style}>{props.color}</li>
+
 }
 
 export default ColorList;
